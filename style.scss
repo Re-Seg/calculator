@@ -42,8 +42,11 @@ body{
                 font-weight: normal lighter;
                 width: inherit;
                 height: inherit;
-                padding-left: 8px;
+                padding-right: 8px;
                 font-family: sans-serif;
+                &:hover{
+                    font-weight: bold;
+                }
             }
         }
         #t-flied{

@@ -2,6 +2,9 @@ var body = document.querySelector('body');
 var flied = document.querySelector('#t-flied');
 var button = document.querySelector('#bnt');
 var number = document.querySelector('#t-number');
+var tOne = document.querySelector('#t-one');
+var tTwo = document.querySelector('#t-two');
+var tThree = document.querySelector('#t-three');
 var partTwo = document.querySelector('.part2');
 var partThree = document.querySelector('.part3');
 var key = document.querySelectorAll('.button');
@@ -12,10 +15,8 @@ var e = 1;
 var a = 0;
 var r = false;
 var keys = Array.from(key);
-//var tab= [];
-
-
 button.addEventListener('click', theme);
+flied.addEventListener('click', theme);
 function theme() {
     if(e<2){
         button.style.oTransform = 'translateX(12.5px)';
@@ -51,7 +52,6 @@ function theme() {
             }
             a++;
         }
-
         a=0;
         equals.style.background = 'hsl(25, 98%, 40%)';
         equals.style.boxShadow = '1px 3px 0.5px hsl(25, 99%, 27%)';
@@ -87,14 +87,11 @@ function theme() {
         function reset2() {
             reset.style.background = 'hsl(185, 42%, 37%)';
         }
-
-
         if (r==false) {
             e=2; 
         }else{
             e=3
         }
-        
     }else if(e<3) {
         button.style.oTransform = 'translateX(25px)';
         button.style.mozTransform = 'translateX(25px)';
@@ -236,4 +233,19 @@ function theme() {
         e=1;
         r=false;
     }
+}
+tOne.addEventListener('click', Tone);
+function Tone() {
+    e=3;
+    theme();
+}
+tTwo.addEventListener('click', Ttwo);
+function Ttwo() {
+    e=1;
+    theme();
+}
+tThree.addEventListener('click', Tthree);
+function Tthree() {
+    e=2;
+    theme();
 }
